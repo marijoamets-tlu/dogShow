@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{ selectedDogshow.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-icon name="location-outline"></ion-icon>{{ selectedDogshow.location }}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-icon name="time-outline"></ion-icon>
+          {{ selectedDogshow.startdate.toLocaleString('de-DE', {dateStyle: 'medium', timeStyle: 'short'}) }} - 
+          {{ selectedDogshow.enddate.toLocaleString('de-DE', {dateStyle: 'medium', timeStyle: 'short'}) }}
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+  </ion-item>
+
+  <ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <strong>Lisa koer</strong>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Nimi</ion-label>
+            <ion-input></ion-input>
+          </ion-item>  
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Registreerimisnumber</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="full" color="primary" [routerLink]="['/dogshows']">Registreeri</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "dogShow",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
